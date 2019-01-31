@@ -21,6 +21,12 @@ document.addEventListener("keydown", evt => {
     modal.classList.contains("modal--opened") &&
     event.keyCode === escKeyCode
   ) {
-    modal.classList.remove("modal--opened");
+    modalClose();
+  }
+});
+
+document.addEventListener("click", evt => {
+  if (evt.target === modal) {
+    modalClose();
   }
 });
